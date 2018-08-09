@@ -1,0 +1,29 @@
+<div class="container margin-top">
+  <div class="card">
+    <div class="card-header">Contact List</div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Active</th>
+          <th>Role</th>
+        </tr>
+        <tr *ngFor="let user of pageContacts">
+          <td>{{user.id}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.active}}</td>
+          <td>{{user.roles[0].role}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

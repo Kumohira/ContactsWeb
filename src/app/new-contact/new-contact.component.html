@@ -1,0 +1,45 @@
+<div class="container margin-top">
+  <div class="card">
+    <div class="card-header">Contact List</div>
+    <div class="card-body">
+        <div class="form-group">
+          <label>username: </label>
+          <input class="form-control" type="text" [(ngModel)]="contact.username"  />
+        </div>
+        <div class="form-group">
+          <label>password: </label>
+          <input class="form-control" type="text" [(ngModel)]="contact.password"/>
+        </div>
+        <div class="form-group">
+          <label>email: </label>
+          <input class="form-control" type="text" [(ngModel)]="contact.email" />
+        </div>
+        <div class="form-group">
+          <label>phone: </label>
+          <input class="form-control" type="text" [(ngModel)]="contact.phone"/>
+        </div>
+        <div class="form-group">
+          <label>firstName: </label>
+          <input class="form-control" type="text" [(ngModel)]="contact.firstName" />
+        </div>
+        <div class="form-group">
+          <label>lastName: </label>
+          <input class="form-control" type="text" [(ngModel)]="contact.lastName" />
+        </div>
+        <div class="form-group">
+          <label class="margin-right">Account Status: </label>
+          <!--<input class="form-control" type="number" [(ngModel)]="contact.active" />-->
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="active" name="userstatus" class="custom-control-input" value= 1 [(ngModel)]="contact.active">
+            <label class="custom-control-label" for="active">Active</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="inactive" name="userstatus" class="custom-control-input" value=0 [(ngModel)]="contact.active">
+            <label class="custom-control-label" for="inactive">Inactive</label>
+          </div>
+        </div>
+      <button class="btn btn-primary" (click)="newContact()">Save</button>
+    </div>
+  </div>
+</div>
+
