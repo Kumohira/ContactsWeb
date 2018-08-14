@@ -9,9 +9,9 @@ export class ContactsService{
   }
 
   getContacts(){
-    return this.http.get("http://localhost:8088/getadmins?access_token=2732e500-5efe-42a4-a5e4-009e54d8d0e9");
+    return this.http.get("http://localhost:8088/users/admin?access_token=48d75a3d-7e77-4f97-a057-11d284aa5068");
   }
   saveContact(contact:Contact){
-    return this.http.post("http://localhost:8088/newadmin?access_token=2732e500-5efe-42a4-a5e4-009e54d8d0e9", contact);
+    return this.http.post("http://localhost:8088/users/admin?access_token=48d75a3d-7e77-4f97-a057-11d284aa5068", contact);
   }
 }
