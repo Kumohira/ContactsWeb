@@ -4,8 +4,8 @@ export class Contact{
   password: string = "";
   email: string = "";
   phone: string = "";
-  firstname: string = "";
-  lastname: string = "";
+  firstName: string = "";
+  lastName: string = "";
   active:boolean = false;
 
   constructor() {
