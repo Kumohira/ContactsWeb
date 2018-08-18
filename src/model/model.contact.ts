@@ -1,5 +1,6 @@
 export class Contact{
 
+  id: number;
   username: string = "";
   password: string = "";
   email: string = "";

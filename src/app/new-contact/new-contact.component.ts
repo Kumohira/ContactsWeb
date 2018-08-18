@@ -20,8 +20,8 @@ export class NewContactComponent implements OnInit {
   newContact() {
     this.contactservice.saveContact(this.contact)
       .subscribe(
-        data => {console.log(data);},
-        err => {console.log(err);}
+        data => {},
+        err => {console.log(JSON.parse(err._body).message);}
       );
   }
 }

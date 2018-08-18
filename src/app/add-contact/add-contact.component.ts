@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ContactsService} from '../../services/contacts.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-contact',
@@ -8,7 +9,7 @@ import {ContactsService} from '../../services/contacts.service';
 })
 export class AddContactComponent implements OnInit {
 
-  constructor(public contactservice:ContactsService) { }
+  constructor(public router:Router, public contactservice:ContactsService) { }
 
   ngOnInit() {
   }
@@ -16,8 +17,12 @@ export class AddContactComponent implements OnInit {
   onSaveContact(dataForm){
     this.contactservice.saveContact(dataForm)
       .subscribe(
-        data => {console.log(data);},
+        data => {},
         err => {console.log(JSON.parse(err._body).message);}
       );
+    //setTimeout(this.onSaveContact, 3000 );
+    // apres avoir ajouté un contact, le contact ne s'affiche pas dans le component Contacts
+    // "'"router.navigate" s'execute avant de "contactservice.saveContact"
+    this.router.navigate(['contacts']);
   }
 }
